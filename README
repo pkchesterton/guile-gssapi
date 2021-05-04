@@ -1,0 +1,3 @@
+# guile-gssapi
+
+Guile 3.0 bindings to the GSSAPI library, via the MIT Kerberos v5 implementation.

@@ -1,0 +1,10 @@
+autom4te.cache/
+configure
+Makefile.in
+Makefile
+config.log
+config.status
+guile/Makefile
+src/.deps/
+src/Makefile
+src/snarfed_includeme.h
