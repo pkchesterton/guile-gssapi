@@ -3,6 +3,7 @@ Makefile
 config.log
 config.status
 guile/Makefile
+guile/guile-gssapi.scm
 src/.deps/
 src/Makefile
 src/snarfed_includeme.h

@@ -2,6 +2,8 @@ AC_INIT([guile-gssapi], [0.1.0], [guile-gssapi@eiere.com])
 AM_INIT_AUTOMAKE
 LT_INIT
 
+AC_PROG_SED
+
 CFLAGS="-Werror -g"
 
 PKG_CHECK_MODULES([GUILE], [guile-3.0])

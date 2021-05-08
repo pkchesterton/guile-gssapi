@@ -15,7 +15,7 @@
 
 (define-module (guile-gssapi))
 
-(load-extension "libguile-gssapi" "init")
+(dynamic-call "init" (dynamic-link "LIBGUILE_GSSAPI_SO_PLACEHOLDER"))
 (export gss-import-name)
 (export gss-display-name)
 ;(export oid->list)
