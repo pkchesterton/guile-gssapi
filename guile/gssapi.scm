@@ -13,9 +13,9 @@
 ;  You should have received a copy of the GNU General Public License
 ;  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-(define-module (guile-gssapi))
+(define-module (gssapi))
 
-(dynamic-call "init" (dynamic-link "LIBGUILE_GSSAPI_SO_PLACEHOLDER"))
+(dynamic-call "init" (dynamic-link "/home/pnk/DVCS/eiere.com/pnk/GUIX/meta_guile-gssapi/guile-gssapi/tree/lib/libguile-gssapi.so"))
 (export gss-import-name)
 (export gss-display-name)
 ;(export oid->list)

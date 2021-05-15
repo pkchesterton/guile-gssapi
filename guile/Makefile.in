@@ -271,7 +271,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 guilehomedir = $(datadir)/guile/site/3.0
-guilehome_DATA = guile-gssapi.scm
+guilehome_DATA = gssapi.scm
 all: all-am
 
 .SUFFIXES:
@@ -492,7 +492,7 @@ uninstall-am: uninstall-guilehomeDATA
 .PRECIOUS: Makefile
 
 
-guile-gssapi.scm: guile-gssapi.scm.src
+gssapi.scm: gssapi.scm.src
 	$(SED) -e 's|LIBGUILE_GSSAPI_SO_PLACEHOLDER|$(libdir)/libguile-gssapi.so|g' $^ >$@
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.

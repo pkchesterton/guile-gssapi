@@ -1,4 +1,4 @@
-AC_INIT([guile-gssapi], [0.1.0], [guile-gssapi@eiere.com])
+AC_INIT([guile-gssapi], [0.2.0], [guile-gssapi@eiere.com])
 AM_INIT_AUTOMAKE
 LT_INIT
 
