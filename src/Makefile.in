@@ -328,6 +328,7 @@ C_SOURCES = bindings.c
 libguile_gssapi_la_SOURCES = $(C_SOURCES)
 libguile_gssapi_la_CFLAGS = @GUILE_CFLAGS@ @GUILE_LIBS@
 BUILT_SOURCES = snarfed_includeme.h
+CLEANFILES = snarfed_includeme.h
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -565,6 +566,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
