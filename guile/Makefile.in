@@ -272,6 +272,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 guilehomedir = $(datadir)/guile/site/3.0
 guilehome_DATA = gssapi.scm
+CLEANFILES = gssapi.scm
 all: all-am
 
 .SUFFIXES:
@@ -400,6 +401,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
@@ -490,7 +492,6 @@ uninstall-am: uninstall-guilehomeDATA
 	uninstall-am uninstall-guilehomeDATA
 
 .PRECIOUS: Makefile
-
 
 gssapi.scm: gssapi.scm.src
 	$(SED) -e 's|LIBGUILE_GSSAPI_SO_PLACEHOLDER|$(libdir)/libguile-gssapi.so|g' $^ >$@
