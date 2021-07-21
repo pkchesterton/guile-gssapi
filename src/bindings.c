@@ -808,5 +808,5 @@ init(void)
 					     
 
 					     
-  #include "snarfed_includeme.h"
+  #include "snarfed_includeme.x"
 }

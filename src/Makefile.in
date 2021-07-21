@@ -327,8 +327,8 @@ lib_LTLIBRARIES = libguile-gssapi.la
 C_SOURCES = bindings.c
 libguile_gssapi_la_SOURCES = $(C_SOURCES)
 libguile_gssapi_la_CFLAGS = @GUILE_CFLAGS@ @GUILE_LIBS@
-BUILT_SOURCES = snarfed_includeme.h
-CLEANFILES = snarfed_includeme.h
+BUILT_SOURCES = snarfed_includeme.x
+CLEANFILES = snarfed_includeme.x
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -665,7 +665,7 @@ uninstall-am: uninstall-libLTLIBRARIES
 
 .PRECIOUS: Makefile
 
-snarfed_includeme.h: $(C_SOURCES)
+snarfed_includeme.x: $(C_SOURCES)
 	guile-snarf -o $@ @GUILE_CFLAGS@ $(C_SOURCES)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
